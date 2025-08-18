@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jake's Portfolio</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <nav class="navbar" id="navbar">
+          <div class="header"> 
+            <h1>Jake's Portfolio</h1>
+            <h3>Computer Science 7B 2024-25</h3>
+          </div>
+          <div class="links">
+            <a id="about" onclick="loadContent('about')">About</a>
+          </div>
+          <footer class="footer">
+            <small>This site was created for an academic assignment and is hosted via
+              <a class="footer-links" href="https://edu.sirkorgo.com" target="_blank" rel="noopener noreferrer">edu.sirkorgo.com</a>
+            </small>
+          </footer>
+        </nav>
+
+        <main class="content" id="content">
+          <!-- Content loads here -->
+        </main>
+      </div>
+    </div>
+
+  <button class="menu-button" onclick="toggleNavbar()" id="menuBtn">☰</button>
+
+  <script>
+      function loadContent(page) {
+  fetch(`/src/html/${page}.html`)
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load content');
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('content').innerHTML = html;
+      document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
+      const activeLink = document.getElementById(page);
+      if (activeLink) activeLink.classList.add('active');
+      window.location.hash = page;
+
+      // Close the navbar if it's open (for mobile)
+      const nav = document.getElementById('navbar');
+      const btn = document.getElementById('menuBtn');
+      if (nav.classList.contains('show')) {
+        nav.classList.remove('show');
+        btn.classList.remove('active');
+      }
+    })
+    .catch(() => {
+      document.getElementById('content').innerHTML = '<p>Error loading content. Please try again.</p>';
+    });
+}
+
+      function toggleNavbar() {
+    const nav = document.getElementById('navbar');
+    const btn = document.getElementById('menuBtn');
+    nav.classList.toggle('show');
+    btn.classList.toggle('active');
+  }
+
+
+      window.addEventListener('load', () => {
+        const page = window.location.hash.slice(1) || 'about';
+        loadContent(page);
+      });
+
+      window.addEventListener('hashchange', () => {
+        const page = window.location.hash.slice(1) || 'about';
+        loadContent(page);
+      });
+    </script>
+  </body>
+</html>

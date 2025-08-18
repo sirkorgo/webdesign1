@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<!--Hey there! If you want to copy this code, or learn more about it, check out the GitHub repo: https://github.com/sirkorgo/cs-portfolio/-->
+
+<head>
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Jake's Portfolio: Photoshop Projects</title>
+</head>
+
+<body>
+  <div class="header">
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <div>
+      <h1>Photoshop Projects</h1>
+      <h3>I LOVE PHOTOSHOP, I LOVE PHOTOSHOP. PHOTOSHOP IS MY BEST FRIEND AND ONE TRUE LOVE.</h3>
+    </div>
+    <img width="50%" height="50%" style="max-width: 250px; max-height:250px;" src="/content/video/phopshop.gif" alt="Photoshop my Beloved">
+  </div>
+</div>
+  
+  <div class="content">
+    <h2>Introduction to Image Manipulation</h2>
+    <h3>The objective in this project was to create an absurd image that had proper shading and looked to be as if "this could happen in real life".</h3>
+    <a href="/content/image/manipulation.png"><img width="75%" height="75%" style="max-width: 426px; max-height: 240px;" src="/content/image/manipulation.png" alt="Image Manipulation Project"></a>
+    <br>
+    <h2>2 Point Perspective Assignment</h2>
+    <h3>The objective of this assignment was to create an image that had a 2 point perspective along with building textures with a personal touch.</h3>
+    <a href="/content/image/perspective2.png"><img style="max-width: 480px; max-height: 135px;" width="75%" height="75%" src="/content/image/perspective2.png" alt="2 Point Perspective Project"></a>
+    <br>
+    <h2>Blending Images Assignment</h2>
+    <h3>The objective in this project was to create an image where a puddle of water would blend with a road, and some character coming out of the puddle, like a portal to another dimension.</h3>
+    <a href="/content/image/crossover.png"><img style="max-width: 426px; max-height: 240px;" width="75%" height="75%" src="/content/image/crossover.png" alt="Blending Crossover"></a>
+    <br>
+    <h2>Image Restoration #1</h2>
+    <h3>The objective of this assignment was to restore a vandalized image to what it would look like without the damage to the image.</h3>
+    <a href="/content/image/restore.png"><img style="max-width: 500px; max-height: 400px;" width="75%" height="75%" src="/content/image/restore.png" alt="Image Restoration Project"></a>
+    <br>
+    <h2>Group Photo Restoration</h2>
+    <h3>The objective of this assignment was to remove a group of people from the image, leaving just the background. This project was definitely one of most unenjoyable because of how tedious it was. </h3>
+    <a href="/content/image/restore2.png"><img style="max-width: 390px; max-height: 263.1px;" width="75%" height="75%" src="https://csp25.pages.dev/content/image/restore2.png" alt="Image Restoration Project 2"></a>
+  </div>
+</body>
