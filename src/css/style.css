@@ -45,6 +45,13 @@ p {
   font-size: 20px;
 }
 
+pre {
+  font-family: "Space Grotesk", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
 small {
   font-family: "Space Grotesk", sans-serif;
   color: #ffffff;
@@ -142,9 +149,63 @@ small {
   background: #9094ff;
 }
 
+.wrapper {
+	background-color: #E1E2E2;
+	height: 130px;
+	overflow: hidden;
+	position: relative;
+  max-width: 700px;
+	width: 100%;
+  margin: auto;
+  position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
 
+.wrapper:before, .wrapper:after {
+	content: "";
+	position: absolute;
+	height: 130px;
+	width: 150px;
+	z-index: 2;
+}
 
-@media (max-width: 768px) {
+.wrapper:after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+.wrapper:before {
+	left: 0;
+	top: 0;
+}
+
+.wrapper .track {
+	display: flex;
+	width: calc(150px * 10);
+	animation: scroll 15s 0.5s linear infinite;
+}
+
+.wrapper .obj {
+	width: 150px;
+}
+
+.wrapper .obj img {
+	height: 150px;
+}
+
+@keyframes  scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-150px * 5));
+	}
+}
+
+@media (max-width: 100%) {
   .navbar .links br {
     display: none;
   }
