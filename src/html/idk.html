@@ -67,46 +67,53 @@ article .scroll-content > div:last-child {
 </head>
 
 <script>
-  const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
 
 scrollContainers.forEach((container) => {
-	const scrollWidth = container.scrollWidth;
-	let isScrollingPaused = false;
+    const scrollWidth = container.scrollWidth;
+    let isScrollingPaused = false;
 
-	window.addEventListener("load", () => {
-		self.setInterval(() => {
-			if (isScrollingPaused) {
-				return;
-			}
-			const first = container.querySelector("article");
+    window.addEventListener("load", () => {
+        self.setInterval(() => {
+            if (isScrollingPaused) {
+                return;
+            }
+            const first = container.querySelector("article");
 
-			if (!isElementInViewport(first)) {
-				container.appendChild(first);
-				container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
-			}
-			if (container.scrollLeft !== scrollWidth) {
-				container.scrollTo(container.scrollLeft + 1, 0);
-			}
-		}, 15);
-	});
+            // Check if the element is out of the viewport on the left side
+            // and if so, append it to the end and adjust the scroll position.
+            // Using rect.right <= 0 instead of rect.right > 0 allows the entire element to leave the viewport before repositioning.
+            if (first.getBoundingClientRect().right <= 0) {
+                container.appendChild(first);
+                // Adjust scroll position after appending the child
+                container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+            }
 
-	function isElementInViewport(el) {
-		var rect = el.getBoundingClientRect();
-		return rect.right > 0;
-	}
+            if (container.scrollLeft !== scrollWidth) {
+                container.scrollTo(container.scrollLeft + 1, 0);
+            }
+        }, 15);
+    });
 
-	function pauseScrolling() {
-		isScrollingPaused = true;
-	}
+    // isElementInViewport function can be removed if the logic is directly implemented
+    // within the setInterval function as above.
+    // function isElementInViewport(el) {
+    //     var rect = el.getBoundingClientRect();
+    //     return rect.right > 0;
+    // }
 
-	function resumeScrolling() {
-		isScrollingPaused = false;
-	}
-	const allArticles = container.querySelectorAll("article");
-	for (let article of allArticles) {
-		article.addEventListener("mouseenter", pauseScrolling);
-		article.addEventListener("mouseleave", resumeScrolling);
-	}
+    function pauseScrolling() {
+        isScrollingPaused = true;
+    }
+
+    function resumeScrolling() {
+        isScrollingPaused = false;
+    }
+    const allArticles = container.querySelectorAll("article");
+    for (let article of allArticles) {
+        article.addEventListener("mouseenter", pauseScrolling);
+        article.addEventListener("mouseleave", resumeScrolling);
+    }
 });
 </script>
 
