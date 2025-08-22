@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 .scroll-container {
   margin: auto;
   max-width: 1440px;
@@ -58,11 +60,17 @@ article .scroll-content > div:last-child {
 }
 
 h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  font-weight: bolder;
   font-size: large;
   text-align: center;
 }
 
 p {
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  font-weight: normal;
   font-size: medium;
   text-align: left;
 }
