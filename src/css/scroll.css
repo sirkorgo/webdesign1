@@ -3,7 +3,6 @@
   max-width: 1440px;
   overflow-x: scroll;
   white-space: nowrap;
-  background-color: #fff;
   display: flex;
   -ms-overflow-style: none;
   scrollbar-width: none;
