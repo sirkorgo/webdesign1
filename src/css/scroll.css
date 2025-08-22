@@ -72,4 +72,5 @@ p {
   font-weight: normal;
   font-size: medium;
   text-align: center;
+  overflow: hidden;
 }
