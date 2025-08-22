@@ -58,8 +58,10 @@ article .scroll-content > div:last-child {
 
 h3 {
   font-size: large;
+  text-align: center;
 }
 
 p {
   font-size: medium;
+  text-align: left;
 }
