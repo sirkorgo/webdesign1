@@ -57,9 +57,9 @@ article .scroll-content > div:last-child {
 }
 
 h3 {
-  font-size: 100%;
+  font-size: large;
 }
 
 p {
-  font-size: 90%;
+  font-size: medium;
 }
