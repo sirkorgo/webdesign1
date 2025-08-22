@@ -54,3 +54,11 @@ article .scroll-content > div {
 article .scroll-content > div:last-child {
   height: 5rem;
 }
+
+h3 {
+  font-size: 100%;
+}
+
+p {
+  font-size: 50%;
+}
