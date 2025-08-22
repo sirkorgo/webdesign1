@@ -6,6 +6,8 @@
   display: flex;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  height: 80%;
+  width: 100%;
 }
 
 .scroll-disabler {
