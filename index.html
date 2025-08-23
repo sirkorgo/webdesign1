@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -12,25 +13,19 @@
         <nav class="navbar" id="navbar">
           <div class="header"> 
             <h1>Jake's Page</h1>
-            <h3>Computer Science 2025-26</h3>
           </div>
-          <div class="links">
-            <a id="about" onclick="loadContent('about')">About</a>
+          <div class="navItems">
+            <button id="about" onclick="loadContent('about')">About</button>
             <br>
-            <a id="about" onclick="loadContent('inspo')">Inspirations</a>
+            <button id="inspo" onclick="loadContent('inspo')">Inspirations</button>
             <br>
-            <a id="about" onclick="loadContent('video')">Videos</a>
+            <button id="video" onclick="loadContent('video')">Videos</button>
             <br>
-            <a id="about" onclick="loadContent('games')">Game Design</a>
+            <button id="games" onclick="loadContent('games')">Game Design</button>
             <br>
-            <a id="about" onclick="loadContent('graphic')">Graphic Design</a>
+            <button id="graphic" onclick="loadContent('graphic')">Graphic Design</button>
             <br>
           </div>
-          <footer class="footer">
-            <small>This site was created for an academic assignment and is hosted via
-              <a class="footer-links" href="https://edu.sirkorgo.com" target="_blank" rel="noopener noreferrer">edu.sirkorgo.com</a>
-            </small>
-          </footer>
         </nav>
 
         <main class="content" id="content">
@@ -38,8 +33,6 @@
         </main>
       </div>
     </div>
-
-  <button class="menu-button" onclick="toggleNavbar()" id="menuBtn">☰</button>
 
   <script>
       function loadContent(page) {
@@ -50,32 +43,16 @@
     })
     .then(html => {
       document.getElementById('content').innerHTML = html;
-      document.querySelectorAll('.navbar a').forEach(link => link.classList.remove('active'));
-      const activeLink = document.getElementById(page);
-      if (activeLink) activeLink.classList.add('active');
+      document.querySelectorAll('.navbar button').forEach(button => button.classList.remove('active'));
+      const activeButton = document.getElementById(page);
+      if (activeButton) activeButton.classList.add('active');
       window.location.hash = page;
 
-      // Close the navbar if it's open (for mobile)
-      const nav = document.getElementById('navbar');
-      const btn = document.getElementById('menuBtn');
-      if (nav.classList.contains('show')) {
-        nav.classList.remove('show');
-        btn.classList.remove('active');
-      }
     })
     .catch(() => {
       document.getElementById('content').innerHTML = '<p>Error loading content. Please try again.</p>';
     });
 }
-
-      function toggleNavbar() {
-    const nav = document.getElementById('navbar');
-    const btn = document.getElementById('menuBtn');
-    nav.classList.toggle('show');
-    btn.classList.toggle('active');
-  }
-
-
       window.addEventListener('load', () => {
         const page = window.location.hash.slice(1) || 'about';
         loadContent(page);
@@ -86,5 +63,11 @@
         loadContent(page);
       });
     </script>
+
+  <footer class="footer">
+            <small>This site was created for an academic assignment and is hosted via
+              <a class="footer-links" href="https://edu.sirkorgo.com" target="_blank" rel="noopener noreferrer">edu.sirkorgo.com</a>
+            </small>
+          </footer>
   </body>
 </html>
