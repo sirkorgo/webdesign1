@@ -144,7 +144,7 @@ button:hover {
   gap: 8px; /* 10px * 0.8 = 8px */
   flex-shrink: 0;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
-  background: #8a9ab5;
+  background: #79a3eb;
   border-color: transparent;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
   color: white; 
