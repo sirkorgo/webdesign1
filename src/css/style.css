@@ -132,3 +132,26 @@ button.active {
   font-weight: 700;
   line-height: normal;
 }
+
+button:hover {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  min-height: 40px; /* 50px * 0.8 = 40px */
+  padding: 10.4px 22.4px; /* 13px * 0.8 = 10.4px, 28px * 0.8 = 22.4px */
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* 10px * 0.8 = 8px */
+  flex-shrink: 0;
+  border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
+  background: #628fb6;
+  border-color: transparent;
+  border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
+  color: white; 
+  text-align: center;
+  font-family: "Space Grotesk";
+  font-size: 15px; /* 17px * 0.8 = 13.6px */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
