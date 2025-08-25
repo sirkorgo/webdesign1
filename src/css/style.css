@@ -121,7 +121,7 @@ button.active {
   gap: 8px; /* 10px * 0.8 = 8px */
   flex-shrink: 0;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
-  background: #8fadc7;
+  background: #006AC7;
   border-color: transparent;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
   color: white; 
@@ -144,7 +144,7 @@ button:hover {
   gap: 8px; /* 10px * 0.8 = 8px */
   flex-shrink: 0;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
-  background: ;
+  background: #8a9ab5;
   border-color: transparent;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
   color: white; 
