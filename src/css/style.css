@@ -121,7 +121,7 @@ button.active {
   gap: 8px; /* 10px * 0.8 = 8px */
   flex-shrink: 0;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
-  background: rgba(0, 106, 199, 25);
+  background: #8fadc7;
   border-color: transparent;
   border-radius: 41.6px; /* 52px * 0.8 = 41.6px */
   color: white; 
