@@ -87,6 +87,10 @@ a:hover {
   color: white;
 }
 
+.grid-layout {
+  display: grid;
+}
+
 /* Default button styles */
 button {
   display: flex;
